@@ -7,11 +7,9 @@ Gem::Specification.new do |s|
   s.version     = "0.1.0"
   s.authors     = ["Brian Smith"]
   s.email       = ["bsmith@swig505.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/Estimize/fiscal_date"
   s.summary     = %q{Ruby gem for working with fiscal dates}
   s.description = %q{Ruby gem for working with fiscal dates}
-
-  s.rubyforge_project = "fiscal_date"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
@@ -20,6 +18,4 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency('rake')
   s.add_development_dependency('minitest', [">= 2.6.2"])
-  
-  # s.add_dependency "rubyzip"
 end 
