@@ -19,6 +19,14 @@ describe FiscalDate do
     end
   end
 
+  it "should not allow years outside of 1-9999" do
+    ["a",0,10000].each do |y|
+      -> {
+        FiscalDate.new(y, 1)
+      }.must_raise(FiscalDate::InvalidYear)
+    end
+  end
+
   describe "#to_s" do
     it "should return Q<quarter> YYYY format" do
       fiscal_date.to_s.must_equal "Q1 2012"

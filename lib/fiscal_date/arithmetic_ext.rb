@@ -2,9 +2,16 @@ class FiscalDate
   module ArithmeticExt
 
     def -(fd_or_integer)
-      year_diff = year - fd_or_integer.year
-      quarter_diff = quarter - fd_or_integer.quarter
-      year_diff * 4 + quarter_diff
+      case fd_or_integer
+      when Integer
+        self.+(-fd_or_integer)
+      when FiscalDate
+        year_diff = year - fd_or_integer.year
+        quarter_diff = quarter - fd_or_integer.quarter
+        year_diff * 4 + quarter_diff
+      else
+        raise(ArgumentError, "must pass an integer or another FiscalDate")
+      end
     end
 
     def +(quarters)
