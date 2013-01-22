@@ -24,20 +24,4 @@ describe FiscalDate do
       fiscal_date.to_s.must_equal "Q1 2012"
     end
   end
-
-  describe "#-" do
-    describe "when argument is FiscalDate" do
-      it "should return the difference in quarters for same year" do
-        (FiscalDate.new(2012, 4) - FiscalDate.new(2012, 2)).must_equal 2
-      end
-      
-      it "should return the difference in quarters for different years" do
-        (FiscalDate.new(2012, 4) - FiscalDate.new(2010, 3)).must_equal 9
-      end
-      
-      it "should return negative difference when appropriate" do
-        (FiscalDate.new(2012, 2) - FiscalDate.new(2012, 4)).must_equal -2
-      end
-    end
-  end
 end
