@@ -4,7 +4,7 @@ require "fiscal_date"
 
 Gem::Specification.new do |s|
   s.name        = "fiscal_date"
-  s.version     = "0.1.0"
+  s.version     = "0.1.1"
   s.authors     = ["Brian Smith"]
   s.email       = ["bsmith@swig505.com"]
   s.homepage    = "https://github.com/Estimize/fiscal_date"

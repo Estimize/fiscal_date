@@ -32,4 +32,11 @@ describe FiscalDate do
       fiscal_date.to_s.must_equal "Q1 2012"
     end
   end
+
+  it "should work as a hash key" do
+    hash = {}
+    hash[FiscalDate.new(2012, 1)] = 1
+    hash[FiscalDate.new(2012, 1)] = 2
+    hash.keys.size.must_equal 1
+  end
 end

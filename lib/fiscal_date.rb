@@ -26,4 +26,10 @@ class FiscalDate
     "Q#{quarter.to_s} #{year.to_s}"
   end
 
+  alias_method :eql?, :==
+
+  def hash
+    to_s.hash
+  end
+
 end
