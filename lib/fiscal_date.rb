@@ -1,12 +1,10 @@
 require 'date'
 require 'fiscal_date/comparable_ext'
 require 'fiscal_date/arithmetic_ext'
-require 'fiscal_date/date_ext'
 
 class FiscalDate
   include ComparableExt
   include ArithmeticExt
-  include DateExt
 
   class InvalidQuarter < StandardError; end
   class InvalidYear < StandardError; end
